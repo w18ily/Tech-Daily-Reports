@@ -2,6 +2,6 @@
     "feishu_webhook": "",
     "dingtalk_webhook": "",
     "wework_webhook": "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=cdd47382-9741-4b81-a9d8-af8d0133cc23",
-    "report_base_url": "",
+    "report_base_url": "https://github.com/w18ily/Tech-Daily-Reports",
     "local_server_port": 8080
 }

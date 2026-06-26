@@ -1,0 +1,882 @@
+# ═══════════════════════════════════════════════════════════════
+# TechDaily 关键词配置
+# 过滤掉：前端技术、设计体验、招聘课程、营销活动、官媒内容
+# 保留：AI模型、AI工程、Agent、MCP、开源工具、基础设施、数据库、芯片机器人、AI商业化
+# ═══════════════════════════════════════════════════════════════
+
+# ───────────────────────────────────────────────────────────────
+# 全局过滤区 - 排除不想看的内容
+# ───────────────────────────────────────────────────────────────
+[GLOBAL_FILTER]
+# 前端技术过滤
+/CSS/ 
+/HTML/ 
+/JavaScript/ 
+/TypeScript/ 
+/React/ 
+/Vue/ 
+/Angular/ 
+/前端/ 
+/前端开发/ 
+/前端框架/ 
+/npm/ 
+/webpack/ 
+/vite/ 
+/next\.js/ 
+/nuxt/ 
+/tailwind/ 
+/bootstrap/ 
+/jquery/ 
+
+# 设计体验过滤
+/UX/ 
+/UI/ 
+/设计/ 
+/用户体验/ 
+/交互设计/ 
+/视觉设计/ 
+/平面设计/ 
+/插画/ 
+/配色/ 
+/字体/ 
+/Figma/ 
+/Sketch/ 
+/Adobe/ 
+/Photoshop/ 
+/Illustrator/ 
+
+# 招聘课程过滤
+/招聘/ 
+/求职/ 
+/面试/ 
+/简历/ 
+/校招/ 
+/社招/ 
+/内推/ 
+/offer/ 
+/课程/ 
+/培训/ 
+/教程/ 
+/入门指南/ 
+/零基础/ 
+/训练营/ 
+/公开课/ 
+/网课/ 
+/慕课/ 
+/学习路径/ 
+/职业规划/ 
+/转行/ 
+
+# 营销活动过滤
+/促销/ 
+/优惠/ 
+/折扣/ 
+/限时/ 
+/秒杀/ 
+/团购/ 
+/抽奖/ 
+/福利/ 
+/红包/ 
+/优惠券/ 
+/满减/ 
+/双十一/ 
+/618/ 
+/黑五/ 
+/发布会.*价格/ 
+/售价/ 
+/定价/ 
+/免费试用.*天/ 
+/会员.*折/ 
+
+# 官媒内容过滤（保留科技类，过滤政治/社会新闻）
+/外交部/ 
+/国防部/ 
+/国务院/ 
+/人大/ 
+/政协/ 
+/常委会/ 
+/政府工作报告/ 
+/领导人/ 
+/视察/ 
+/调研/ 
+/讲话/ 
+/指示/ 
+/批示/ 
+/会议精神/ 
+/政策解读.*非科技/ 
+/乡村振兴/ 
+/脱贫攻坚/ 
+/反腐/ 
+/纪检/ 
+/巡视/ 
+/党建/ 
+/党史/ 
+/意识形态/ 
+/社会新闻/ 
+/交通事故/ 
+/火灾/ 
+/地震/ 
+/洪水/ 
+/台风/ 
+/疫情/ 
+/确诊/ 
+/病例/ 
+/死亡/ 
+/伤亡/ 
+/犯罪/ 
+/逮捕/ 
+/审判/ 
+/判决/ 
+/诉讼/ 
+/纠纷/ 
+/离婚/ 
+/明星/ 
+/娱乐/ 
+/八卦/ 
+/绯闻/ 
+/综艺/ 
+/影视.*明星/ 
+/票房/ 
+/演唱会/ 
+/音乐节/ 
+/时装周/ 
+/红毯/ 
+/代言/ 
+/绯闻/ 
+
+# ───────────────────────────────────────────────────────────────
+# 词组定义区 - 关注的关键词
+# ───────────────────────────────────────────────────────────────
+[WORD_GROUPS]
+
+# ═══════════════════════════════════════════════════════════════
+# AI 模型与算法
+# ═══════════════════════════════════════════════════════════════
+[AI模型]
+/\bGPT\b/ 
+/\bLLM\b/ 
+/大语言模型/ 
+/基础模型/ 
+/预训练模型/ 
+/Transformer\b/ 
+/Diffusion\b/ 
+/多模态模型/ 
+/视觉模型/ 
+/语音模型/ 
+/文生图/ 
+/文生视频/ 
+/图生图/ 
+/模型压缩/ 
+/模型量化/ 
+/模型蒸馏/ 
+/微调\b/ 
+/RLHF/ 
+/对齐\b/ 
+/涌现能力/ 
+/上下文学习/ 
+/思维链/ 
+/Chain of Thought/ 
+/RAG\b/ 
+/检索增强/ 
+/向量数据库/ 
+/Embedding\b/ 
+/Tokenizer\b/ 
+/Token\b/ 
+/参数规模/ 
+/万亿参数/ 
+/Scaling Law/ 
+/涌现/ 
+/幻觉\b/ 
+/对齐\b/ 
+/安全\b.*AI/ 
+/AI安全/ 
+/可解释性/ 
+/Interpretability/ 
+
+[国产大模型]
+/DeepSeek/ 
+/深度求索/ 
+/通义千问/ 
+/Qwen\b/ 
+/文心一言/ 
+/ERNIE\b/ 
+/智谱/ 
+/ChatGLM/ 
+/GLM\b/ 
+/百川/ 
+/Baichuan/ 
+/讯飞星火/ 
+/星火\b/ 
+/豆包\b/ 
+/Kimi\b/ 
+/月之暗面/ 
+/MiniMax/ 
+/阶跃星辰/ 
+/零一万物/ 
+/Yi\b/ 
+/商汤/ 
+/SenseTime/ 
+/昆仑万维/ 
+/天工\b/ 
+/盘古\b/ 
+/混元\b/ 
+/星火\b/ 
+
+[国际大模型]
+/Claude\b/ 
+/Anthropic\b/ 
+/Gemini\b/ 
+/GPT-4/ 
+/GPT-5/ 
+/o1\b/ 
+/o3\b/ 
+/ChatGPT/ 
+/DALL-E/ 
+/Sora\b/ 
+/Midjourney/ 
+/Stable Diffusion/ 
+/SDXL/ 
+/Llama\b/ 
+/Meta AI/ 
+/Mistral/ 
+/Cohere/ 
+/Perplexity/ 
+/Groq\b/ 
+/xAI/ 
+/Grok\b/ 
+
+# ═══════════════════════════════════════════════════════════════
+# AI 工程与基础设施
+# ═══════════════════════════════════════════════════════════════
+[AI工程]
+/MLOps/ 
+/模型部署/ 
+/模型服务/ 
+/推理优化/ 
+/推理加速/ 
+/推理引擎/ 
+/vLLM/ 
+/TensorRT/ 
+/ONNX\b/ 
+/量化\b/ 
+/INT8/ 
+/INT4/ 
+/FP16/ 
+/BF16/ 
+/模型并行/ 
+/数据并行/ 
+/流水线并行/ 
+/张量并行/ 
+/分布式训练/ 
+/混合精度/ 
+/梯度累积/ 
+/Checkpoint/ 
+/模型版本/ 
+/模型注册/ 
+/模型监控/ 
+/A/B测试.*模型/ 
+/特征工程/ 
+/特征平台/ 
+/数据标注/ 
+/数据清洗/ 
+/合成数据/ 
+/数据增强/ 
+
+[AI框架]
+/PyTorch/ 
+/TensorFlow/ 
+/JAX\b/ 
+/Keras\b/ 
+/Hugging Face/ 
+/Transformers/ 
+/Diffusers/ 
+/Accelerate/ 
+/TRL\b/ 
+/PEFT\b/ 
+/LoRA\b/ 
+/QLoRA/ 
+/LangChain/ 
+/LlamaIndex/ 
+/CrewAI/ 
+/AutoGen/ 
+/Flowise/ 
+/Dify\b/ 
+/ComfyUI/ 
+/Gradio\b/ 
+/Streamlit/ 
+/FastAPI/ 
+
+# ═══════════════════════════════════════════════════════════════
+# Agent 与 MCP
+# ═══════════════════════════════════════════════════════════════
+[Agent]
+/Agent\b/ 
+/智能体\b/ 
+/AI Agent/ 
+/Autonomous Agent/ 
+/Multi-Agent/ 
+/多智能体/ 
+/Agent框架/ 
+/Agent编排/ 
+/Tool Use/ 
+/Function Calling/ 
+/ReAct\b/ 
+/Plan-and-Execute/ 
+/Reflection\b/ 
+/记忆\b.*Agent/ 
+/Agent记忆/ 
+/长期记忆/ 
+/短期记忆/ 
+/工作流\b/ 
+/Workflow\b/ 
+/编排\b/ 
+/Orchestration/ 
+
+[MCP]
+/MCP\b/ 
+/Model Context Protocol/ 
+/模型上下文协议/ 
+/Context Protocol/ 
+/Tool Server/ 
+/Server\b.*MCP/ 
+/MCP Server/ 
+/MCP Client/ 
+/Resource\b.*MCP/ 
+/Prompt\b.*MCP/ 
+
+# ═══════════════════════════════════════════════════════════════
+# 开源工具与生态
+# ═══════════════════════════════════════════════════════════════
+[开源工具]
+/开源\b/ 
+/Open Source/ 
+/GitHub/ 
+/GitLab/ 
+/Apache\b/ 
+/Linux\b/ 
+/Docker\b/ 
+/Kubernetes/ 
+/K8s\b/ 
+/Helm\b/ 
+/CI\b/ 
+/CD\b/ 
+/DevOps/ 
+/GitOps/ 
+/IaC\b/ 
+/Terraform/ 
+/Ansible\b/ 
+/Pulumi/ 
+/Nix\b/ 
+/Homebrew/ 
+/APT\b/ 
+/YUM\b/ 
+/Pacman/ 
+/Scoop/ 
+/Chocolatey/ 
+/NPM\b/ 
+/PyPI\b/ 
+/Cargo\b/ 
+/Crates\b/ 
+/Go Modules/ 
+/Maven\b/ 
+/Gradle\b/ 
+/Conda\b/ 
+/Poetry\b/ 
+/Pipenv/ 
+/UV\b/ 
+/Rye\b/ 
+/Packagist/ 
+/Composer/ 
+
+# ═══════════════════════════════════════════════════════════════
+# 基础设施与云计算
+# ═══════════════════════════════════════════════════════════════
+[基础设施]
+/云原生/ 
+/Cloud Native/ 
+/Serverless/ 
+/FaaS\b/ 
+/BaaS\b/ 
+/PaaS\b/ 
+/IaaS\b/ 
+/SaaS\b/ 
+/微服务/ 
+/服务网格/ 
+/Service Mesh/ 
+/Istio\b/ 
+/Envoy\b/ 
+/Linkerd/ 
+/gRPC\b/ 
+/Protobuf/ 
+/Thrift\b/ 
+/消息队列/ 
+/Kafka\b/ 
+/RabbitMQ/ 
+/RocketMQ/ 
+/Pulsar\b/ 
+/NATS\b/ 
+/Redis\b/ 
+/Memcached/ 
+/负载均衡/ 
+/Nginx\b/ 
+/HAProxy/ 
+/Traefik/ 
+/CDN\b/ 
+/边缘计算/ 
+/Edge Computing/ 
+/Serverless/ 
+/无服务器/ 
+/容器\b/ 
+/Container\b/ 
+/容器编排/ 
+/容器化/ 
+/虚拟化/ 
+/KVM\b/ 
+/QEMU/ 
+/Xen\b/ 
+/VMware/ 
+/Hyper-V/ 
+
+# ═══════════════════════════════════════════════════════════════
+# 数据库与存储
+# ═══════════════════════════════════════════════════════════════
+[数据库]
+/数据库\b/ 
+/Database\b/ 
+/DBMS\b/ 
+/关系型数据库/ 
+/SQL\b/ 
+/NoSQL\b/ 
+/NewSQL\b/ 
+/图数据库/ 
+/Graph Database/ 
+/时序数据库/ 
+/Time Series/ 
+/向量数据库/ 
+/Vector DB/ 
+/文档数据库/ 
+/键值存储/ 
+/列存储/ 
+/宽列存储/ 
+/分布式数据库/ 
+/HTAP\b/ 
+/OLTP\b/ 
+/OLAP\b/ 
+/事务\b/ 
+/ACID\b/ 
+/CAP\b/ 
+/一致性\b/ 
+/分片\b/ 
+/Sharding/ 
+/复制\b/ 
+/Replication/ 
+/备份\b/ 
+/恢复\b/ 
+/索引\b/ 
+/查询优化/ 
+/执行计划/ 
+/存储引擎/ 
+/MySQL\b/ 
+/PostgreSQL/ 
+/MariaDB/ 
+/SQLite\b/ 
+/Oracle\b/ 
+/MongoDB/ 
+/Redis\b/ 
+/Elasticsearch/ 
+/ClickHouse/ 
+/TiDB\b/ 
+/OceanBase/ 
+/PolarDB/ 
+/CockroachDB/ 
+/Neo4j\b/ 
+/ArangoDB/ 
+/InfluxDB/ 
+/TimescaleDB/ 
+/Milvus\b/ 
+/Pinecone/ 
+/Weaviate/ 
+/Chroma\b/ 
+/Faiss\b/ 
+/DuckDB\b/ 
+
+# ═══════════════════════════════════════════════════════════════
+# 芯片与硬件
+# ═══════════════════════════════════════════════════════════════
+[芯片]
+/芯片\b/ 
+/半导体\b/ 
+/集成电路/ 
+/IC\b/ 
+/CPU\b/ 
+/GPU\b/ 
+/TPU\b/ 
+/NPU\b/ 
+/APU\b/ 
+/DPU\b/ 
+/FPGA\b/ 
+/ASIC\b/ 
+/SoC\b/ 
+/Chiplet/ 
+/Chip\b/ 
+/处理器\b/ 
+/制程\b/ 
+/纳米\b.*工艺/ 
+/光刻\b/ 
+/EUV\b/ 
+/DUV\b/ 
+/台积电/ 
+/TSMC\b/ 
+/三星\b.*芯片/ 
+/英特尔/ 
+/Intel\b/ 
+/AMD\b/ 
+/英伟达/ 
+/NVIDIA\b/ 
+/高通/ 
+/Qualcomm/ 
+/联发科/ 
+/MediaTek/ 
+/华为.*芯片/ 
+/海思\b/ 
+/麒麟\b/ 
+/昇腾\b/ 
+/寒武纪/ 
+/Cambricon/ 
+/地平线/ 
+/Horizon/ 
+/摩尔线程/ 
+/壁仞\b/ 
+/天数智芯/ 
+/景嘉微/ 
+/龙芯\b/ 
+/兆芯\b/ 
+/飞腾\b/ 
+/申威\b/ 
+/海光\b/ 
+/ARM\b/ 
+/RISC-V/ 
+/x86\b/ 
+/架构\b/ 
+/指令集/ 
+/封装\b/ 
+/测试\b.*芯片/ 
+/良率\b/ 
+/晶圆\b/ 
+/代工\b/ 
+/Foundry/ 
+/Fabless/ 
+/IDM\b/ 
+
+# ═══════════════════════════════════════════════════════════════
+# 机器人与具身智能
+# ═══════════════════════════════════════════════════════════════
+[机器人]
+/机器人\b/ 
+/Robot\b/ 
+/具身智能/ 
+/Embodied AI/ 
+/人形机器人/ 
+/Humanoid/ 
+/四足机器人/ 
+/机器狗/ 
+/机械臂/ 
+/协作机器人/ 
+/Cobot\b/ 
+/工业机器人/ 
+/服务机器人/ 
+/医疗机器人/ 
+/手术机器人/ 
+/无人机/ 
+/UAV\b/ 
+/自动驾驶/ 
+/无人驾驶/ 
+/智驾\b/ 
+/ADAS\b/ 
+/激光雷达/ 
+/LiDAR\b/ 
+/毫米波雷达/ 
+/视觉感知/ 
+/SLAM\b/ 
+/路径规划/ 
+/运动控制/ 
+/伺服\b/ 
+/减速器/ 
+/谐波减速器/ 
+/RV减速器/ 
+/传感器\b/ 
+/力控\b/ 
+/触觉\b/ 
+/宇树\b/ 
+/Unitree/ 
+/波士顿动力/ 
+/Boston Dynamics/ 
+/特斯拉.*机器人/ 
+/Tesla Bot/ 
+/Optimus\b/ 
+/Figure\b/ 
+/Agility/ 
+/傅利叶/ 
+/智元\b/ 
+/AgiBot/ 
+/达闼\b/ 
+/云深处/ 
+/大疆\b/ 
+/DJI\b/ 
+
+# ═══════════════════════════════════════════════════════════════
+# AI 商业化与产业
+# ═══════════════════════════════════════════════════════════════
+[AI商业化]
+/AI商业化/ 
+/AI落地/ 
+/AI应用/ 
+/AI产品/ 
+/AI创业/ 
+/AI公司/ 
+/AI独角兽/ 
+/AI投资/ 
+/AI融资/ 
+/AI并购/ 
+/AI上市/ 
+/AI营收/ 
+/AI盈利/ 
+/AI市场/ 
+/AI行业/ 
+/AI趋势/ 
+/AI报告/ 
+/AI白皮书/ 
+/AI政策/ 
+/AI监管/ 
+/AI立法/ 
+/AI伦理/ 
+/AI治理/ 
+/AI标准/ 
+/AI人才/ 
+/AI岗位/ 
+/AI薪资/ 
+/AI竞赛/ 
+/AI排行榜/ 
+/AI评测/ 
+/Benchmark\b/ 
+/Leaderboard/ 
+/AI生态/ 
+/AI联盟/ 
+/AI合作/ 
+/AI专利/ 
+/AI论文/ 
+/AI会议/ 
+/NeurIPS/ 
+/ICML\b/ 
+/ICLR\b/ 
+/ACL\b/ 
+/CVPR\b/ 
+/ECCV\b/ 
+/AAAI\b/ 
+/IJCAI/ 
+/EMNLP/ 
+
+[算力]
+/算力\b/ 
+/智算中心/ 
+/超算\b/ 
+/超级计算机/ 
+/数据中心/ 
+/IDC\b/ 
+/云计算\b/ 
+/云服务\b/ 
+/云厂商/ 
+/阿里云/ 
+/腾讯云/ 
+/华为云/ 
+/百度云/ 
+/AWS\b/ 
+/Azure\b/ 
+/GCP\b/ 
+/Google Cloud/ 
+/Oracle Cloud/ 
+/IBM Cloud/ 
+/火山引擎/ 
+/天翼云/ 
+/移动云/ 
+/联通云/ 
+
+# ═══════════════════════════════════════════════════════════════
+# 编程语言与开发
+# ═══════════════════════════════════════════════════════════════
+[编程语言]
+/Python\b/ 
+/Rust\b/ 
+/Go\b/ 
+/Golang\b/ 
+/Java\b/ 
+/Kotlin\b/ 
+/Scala\b/ 
+/C\+\+/ 
+/C\b/ 
+/C\#\b/ 
+/TypeScript\b/ 
+/JavaScript\b/ 
+/Node\.js/ 
+/Deno\b/ 
+/Bun\b/ 
+/Zig\b/ 
+/Nim\b/ 
+/Crystal/ 
+/Dart\b/ 
+/Flutter/ 
+/Swift\b/ 
+/Objective-C/ 
+/Ruby\b/ 
+/Elixir\b/ 
+/Erlang\b/ 
+/Haskell\b/ 
+/OCaml\b/ 
+/F\#\b/ 
+/Lisp\b/ 
+/Clojure/ 
+/Julia\b/ 
+/R\b/ 
+/MATLAB/ 
+/Fortran/ 
+/COBOL/ 
+/Assembly/ 
+/WebAssembly/ 
+/WASM\b/ 
+/LLVM\b/ 
+/编译器\b/ 
+/Interpreter\b/ 
+/Runtime\b/ 
+/GC\b/ 
+/垃圾回收/ 
+/内存管理/ 
+/并发\b/ 
+/并行\b/ 
+/异步\b/ 
+/协程\b/ 
+/Coroutine/ 
+/Fiber\b/ 
+/Actor\b/ 
+
+# ═══════════════════════════════════════════════════════════════
+# 网络安全与隐私
+# ═══════════════════════════════════════════════════════════════
+[安全]
+/网络安全/ 
+/信息安全/ 
+/数据安全/ 
+/隐私\b/ 
+/Privacy\b/ 
+/加密\b/ 
+/Encryption/ 
+/零信任/ 
+/Zero Trust/ 
+/漏洞\b/ 
+/CVE\b/ 
+/Exploit\b/ 
+/渗透测试/ 
+/红队\b/ 
+/蓝队\b/ 
+/CTF\b/ 
+/密码学/ 
+/Cryptography/ 
+/区块链\b/ 
+/Blockchain\b/ 
+/Web3\b/ 
+/DeFi\b/ 
+/NFT\b/ 
+/智能合约/ 
+/Smart Contract/ 
+/比特币/ 
+/Bitcoin\b/ 
+/以太坊/ 
+/Ethereum\b/ 
+/Solana\b/ 
+/零知识证明/ 
+/ZK\b/ 
+/同态加密/ 
+/联邦学习/ 
+/Federated Learning/ 
+/差分隐私/ 
+/Differential Privacy/ 
+
+# ═══════════════════════════════════════════════════════════════
+# 操作系统与系统软件
+# ═══════════════════════════════════════════════════════════════
+[操作系统]
+/Linux\b/ 
+/内核\b/ 
+/Kernel\b/ 
+/Windows\b/ 
+/macOS\b/ 
+/iOS\b/ 
+/Android\b/ 
+/鸿蒙\b/ 
+/HarmonyOS/ 
+/OpenHarmony/ 
+/FreeBSD/ 
+/OpenBSD/ 
+/NetBSD/ 
+/eBPF\b/ 
+/systemd\b/ 
+/文件系统/ 
+/Filesystem/ 
+/驱动\b/ 
+/Driver\b/ 
+/固件\b/ 
+/Firmware\b/ 
+/BIOS\b/ 
+/UEFI\b/ 
+/虚拟化/ 
+/Virtualization/ 
+/容器\b/ 
+/Container\b/ 
+/WSL\b/ 
+/QEMU/ 
+/KVM\b/ 
+/Xen\b/ 
+/Hypervisor/ 
+
+# ═══════════════════════════════════════════════════════════════
+# 新兴技术
+# ═══════════════════════════════════════════════════════════════
+[新兴技术]
+/量子计算/ 
+/Quantum\b/ 
+/Qubit\b/ 
+/量子比特/ 
+/量子霸权/ 
+/量子纠缠/ 
+/量子通信/ 
+/脑机接口/ 
+/BCI\b/ 
+/Neuralink/ 
+/基因编辑/ 
+/CRISPR/ 
+/合成生物学/ 
+/Synthetic Biology/ 
+/空间计算/ 
+/Spatial Computing/ 
+/元宇宙\b/ 
+/Metaverse\b/ 
+/VR\b/ 
+/AR\b/ 
+/MR\b/ 
+/XR\b/ 
+/数字孪生/ 
+/Digital Twin/ 
+/6G\b/ 
+/Web3\b/ 
+/DePIN\b/ 
+/去中心化/ 
+/Decentralized/ 
+/边缘AI/ 
+/端侧AI/ 
+/联邦学习/ 
+/可信计算/ 
+/机密计算/ 
+/Confidential Computing/ 
+/TEE\b/ 
+/同态加密/ 
+/后量子密码/ 
+/Post-Quantum/ 

@@ -1,0 +1,17 @@
+# ═══════════════════════════════════════════════════════════════
+# TechDaily 调度配置
+# 每天上午 10:00 自动运行
+# ═══════════════════════════════════════════════════════════════
+
+preset: "custom"
+
+periods:
+  - name: "morning_daily"
+    days: ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+    start_time: "10:00"
+    end_time: "10:30"
+    push: true
+    analysis: true
+    report_mode: "daily"
+    analysis_mode: "daily"
+    dedup: "per_period"

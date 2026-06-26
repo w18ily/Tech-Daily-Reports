@@ -1,0 +1,254 @@
+# ═══════════════════════════════════════════════════════════════
+# TechDaily - 个人科技资讯日报
+# 基于 TrendRadar 架构定制
+# Version: 1.0.0
+# ═══════════════════════════════════════════════════════════════
+
+# ===============================================================
+# 1. 基础设置
+# ===============================================================
+app:
+  timezone: "Asia/Shanghai"
+  show_version_update: false
+
+# ===============================================================
+# 2. 调度系统
+# ===============================================================
+schedule:
+  enabled: true
+  preset: "custom"
+
+# ===============================================================
+# 3. 数据源 - 热榜平台（关闭，只使用 RSS）
+# ===============================================================
+platforms:
+  enabled: false
+  api_url: ""
+  sources: []
+
+# ===============================================================
+# 4. 数据源 - RSS 订阅（核心数据源）
+# ===============================================================
+rss:
+  enabled: true
+  freshness_filter:
+    enabled: true
+    max_age_days: 1
+  feeds:
+    # AI 模型与框架
+    - id: "hacker-news"
+      name: "Hacker News"
+      url: "https://hnrss.org/frontpage"
+    - id: "arxiv-ai"
+      name: "arXiv AI Papers"
+      url: "https://export.arxiv.org/rss/cs.AI"
+    - id: "arxiv-ml"
+      name: "arXiv Machine Learning"
+      url: "https://export.arxiv.org/rss/cs.LG"
+    - id: "papers-with-code"
+      name: "Papers With Code"
+      url: "https://paperswithcode.com/rss"
+    - id: "hugging-face"
+      name: "Hugging Face Blog"
+      url: "https://huggingface.co/blog/feed.xml"
+
+    # AI 工程与基础设施
+    - id: "dev-to-ai"
+      name: "Dev.to AI"
+      url: "https://dev.to/feed/tag/ai"
+    - id: "aws-ai"
+      name: "AWS AI/ML Blog"
+      url: "https://aws.amazon.com/blogs/machine-learning/feed/"
+    - id: "google-ai"
+      name: "Google AI Blog"
+      url: "https://ai.googleblog.com/feeds/posts/default"
+
+    # 开源工具与数据库
+    - id: "github-blog"
+      name: "GitHub Blog"
+      url: "https://github.blog/feed/"
+    - id: "infoq"
+      name: "InfoQ"
+      url: "https://feed.infoq.com/"
+
+    # 芯片与硬件
+    - id: "anandtech"
+      name: "AnandTech"
+      url: "https://www.anandtech.com/rss/"
+    - id: "tomshardware"
+      name: "Tom's Hardware"
+      url: "https://www.tomshardware.com/feeds/all.rss"
+
+    # 中文科技资讯
+    - id: "oschina"
+      name: "开源中国"
+      url: "https://www.oschina.net/news/rss"
+    - id: "solidot"
+      name: "Solidot"
+      url: "https://www.solidot.org/index.rss"
+    - id: "ifanr"
+      name: "爱范儿"
+      url: "https://www.ifanr.com/feed"
+
+# ===============================================================
+# 5. 报告模式
+# ===============================================================
+report:
+  mode: "daily"
+  display_mode: "keyword"
+  sort_by_position_first: false
+  rank_threshold: 5
+  max_news_per_keyword: 0
+
+# ===============================================================
+# 6. 筛选策略
+# ===============================================================
+filter:
+  method: "keyword"
+  priority_sort_enabled: true
+
+# ===============================================================
+# 7. 推送内容控制
+# ===============================================================
+display:
+  region_order:
+    - rss
+    - ai_analysis
+  regions:
+    hotlist: false
+    new_items: false
+    rss: true
+    standalone: false
+    ai_analysis: true
+  standalone:
+    platforms: []
+    rss_feeds: []
+    max_items: 20
+
+# ===============================================================
+# 8. 推送通知（留空，由环境变量或单独配置覆盖）
+# ===============================================================
+notification:
+  enabled: true
+  channels:
+    feishu:
+      webhook_url: ""
+    dingtalk:
+      webhook_url: ""
+    wework:
+      webhook_url: ""
+      msg_type: "markdown"
+    telegram:
+      bot_token: ""
+      chat_id: ""
+    email:
+      from: ""
+      password: ""
+      to: ""
+      smtp_server: ""
+      smtp_port: ""
+    ntfy:
+      server_url: "https://ntfy.sh"
+      topic: ""
+      token: ""
+    bark:
+      url: ""
+    slack:
+      webhook_url: ""
+    generic_webhook:
+      webhook_url: ""
+      payload_template: ""
+
+# ===============================================================
+# 9. 存储配置
+# ===============================================================
+storage:
+  backend: "local"
+  formats:
+    sqlite: true
+    txt: false
+    html: true
+  local:
+    data_dir: "output"
+    retention_days: 30
+  remote:
+    retention_days: 0
+    endpoint_url: ""
+    bucket_name: ""
+    access_key_id: ""
+    secret_access_key: ""
+    region: ""
+  pull:
+    enabled: false
+    days: 7
+
+# ===============================================================
+# 10. AI 模型配置
+# ===============================================================
+ai:
+  model: "deepseek/deepseek-chat"
+  api_key: ""
+  api_base: ""
+  timeout: 120
+  temperature: 1.0
+  max_tokens: 5000
+  num_retries: 1
+  fallback_models: []
+
+# ===============================================================
+# 11. AI 分析功能
+# ===============================================================
+ai_analysis:
+  enabled: true
+  language: "Chinese"
+  prompt_file: "ai_analysis_prompt.txt"
+  mode: "follow_report"
+  max_news_for_analysis: 150
+  include_rss: true
+  include_standalone: false
+  include_rank_timeline: false
+
+# ===============================================================
+# 12. AI 翻译功能
+# ===============================================================
+ai_translation:
+  enabled: true
+  language: "中文"
+  prompt_file: "ai_translation_prompt.txt"
+  batch_size: 100
+  batch_interval: 2
+  scope:
+    hotlist: false
+    rss: true
+    standalone: false
+
+# ===============================================================
+# 13. 高级设置
+# ===============================================================
+advanced:
+  debug: false
+  version_check_url: ""
+  mcp_version_check_url: ""
+  configs_version_check_url: ""
+  crawler:
+    request_interval: 2000
+    use_proxy: false
+    default_proxy: ""
+  rss:
+    request_interval: 1000
+    timeout: 15
+    use_proxy: false
+    proxy_url: ""
+  weight:
+    rank: 0.6
+    frequency: 0.3
+    hotness: 0.1
+  max_accounts_per_channel: 3
+  batch_size:
+    default: 4000
+    dingtalk: 20000
+    feishu: 30000
+    bark: 4000
+    slack: 4000
+  batch_send_interval: 3
+  feishu_message_separator: "━━━━━━━━━━━━━━━━"

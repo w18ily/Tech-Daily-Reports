@@ -1,0 +1,7 @@
+{
+    "feishu_webhook": "",
+    "dingtalk_webhook": "",
+    "wework_webhook": "",
+    "report_base_url": "",
+    "local_server_port": 8080
+}
